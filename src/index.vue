@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
-    <image :src="logo" class="logo" />
-    <text class="greeting">The environment is ready!</text>
+    <!-- <image :src="logo" class="logo" />
+    <text class="greeting">The environment is ready!</text> -->
     <router-view/>
   </div>
 </template>
@@ -18,7 +18,7 @@
 </script>
 
 <style scoped>
-  .wrapper {
+  /* .wrapper {
     justify-content: center;
     align-items: center;
   }
@@ -36,5 +36,5 @@
     margin: 30px;
     font-size: 32px;
     color: #727272;
-  }
+  } */
 </style>
