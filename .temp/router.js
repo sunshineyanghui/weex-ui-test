@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import News from '@/views/news'
+import Cover from '@/views/cover'
 import WeexUi from '@/components/WeexUi'
 
 Vue.use(Router)
@@ -9,7 +10,7 @@ Vue.use(Router)
 module.exports = new Router({
   routes: [
     {
-      path: '/',
+      path: '/news',
       name: 'News',
       component: News
     },
@@ -22,6 +23,11 @@ module.exports = new Router({
       path:'/weexui',
       name: 'WeexUi',
       component: WeexUi
-    }
+    },
+    {
+      path: '/',
+      name: 'Cover',
+      component: Cover
+    },
   ]
 })
