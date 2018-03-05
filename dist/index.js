@@ -8502,6 +8502,62 @@ module.exports = {
   },
   "slider4": {
     "backgroundColor": "#546E7A"
+  },
+  "wxc-demo": {
+    "position": "absolute",
+    "top": 0,
+    "bottom": 0,
+    "left": 0,
+    "right": 0
+  },
+  "scroller": {
+    "flex": 1,
+    "backgroundColor": "#ffffff"
+  },
+  "btn": {
+    "width": "600",
+    "height": "80",
+    "marginTop": "50",
+    "marginLeft": "75",
+    "flexDirection": "row",
+    "alignItems": "center",
+    "justifyContent": "center",
+    "borderRadius": "6",
+    "backgroundColor": "rgb(92,184,92)",
+    "borderColor": "rgb(76,174,76)"
+  },
+  "yellow": {
+    "backgroundColor": "#FDC22D",
+    "borderColor": "#FDC22D"
+  },
+  "btn-txt": {
+    "fontSize": "32",
+    "color": "#ffffff"
+  },
+  "btn-margin": {
+    "marginTop": "40"
+  },
+  "content": {
+    "paddingTop": "30",
+    "paddingRight": "30",
+    "paddingBottom": "30",
+    "paddingLeft": "30",
+    "borderBottomWidth": 0,
+    "justifyContent": "flex-start"
+  },
+  "demo-title": {
+    "alignItems": "center",
+    "marginBottom": "20",
+    "marginTop": "40"
+  },
+  "title": {
+    "color": "#333333",
+    "fontSize": "40"
+  },
+  "content-text": {
+    "color": "#333333",
+    "fontSize": "30",
+    "marginTop": "20"
   }
 }
 
@@ -8516,6 +8572,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _wxcMask = __webpack_require__(1);
+
+var _wxcMask2 = _interopRequireDefault(_wxcMask);
+
 var _wxcLightbox = __webpack_require__(76);
 
 var _wxcLightbox2 = _interopRequireDefault(_wxcLightbox);
@@ -8527,7 +8587,7 @@ var _wxcEpSlider2 = _interopRequireDefault(_wxcEpSlider);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
-  components: { WxcEpSlider: _wxcEpSlider2.default, WxcLightbox: _wxcLightbox2.default },
+  components: { WxcEpSlider: _wxcEpSlider2.default, WxcLightbox: _wxcLightbox2.default, WxcMask: _wxcMask2.default },
   data: function data() {
     return {
       sliderId: 1,
@@ -8539,7 +8599,11 @@ exports.default = {
         scale: 0.8
       },
       imagelist: [{ src: 'https://gd2.alicdn.com/bao/uploaded/i2/T14H1LFwBcXXXXXXXX_!!0-item_pic.jpg' }, { src: 'https://gd1.alicdn.com/bao/uploaded/i1/TB1PXJCJFXXXXciXFXXXXXXXXXX_!!0-item_pic.jpg' }, { src: 'https://gd3.alicdn.com/bao/uploaded/i3/TB1x6hYLXXXXXazXVXXXXXXXXXX_!!0-item_pic.jpg' }],
-      show: false
+      show: false,
+      showmask: false,
+      overlayCanClose: true,
+      isFalse: false,
+      hasAnimation: true
     };
   },
 
@@ -8556,9 +8620,102 @@ exports.default = {
     },
     wxcLightboxOverlayClicked: function wxcLightboxOverlayClicked() {
       this.show = false;
+    },
+    openMask: function openMask(e) {
+      this.showmask = true;
+      this.hasAnimation = true;
+    },
+    wxcMaskSetHidden: function wxcMaskSetHidden() {
+      this.showmask = false;
+    },
+    openNoAnimationMask: function openNoAnimationMask(e) {
+      this.showmask = true;
+      this.hasAnimation = false;
     }
   }
 }; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -9436,6 +9593,8 @@ module.exports.render._withStripped = true
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: ["wrapper"]
+  }, [_c('scroller', {
+    staticClass: ["scroller"]
   }, [_c('wxc-ep-slider', {
     attrs: {
       "sliderId": _vm.sliderId,
@@ -9472,7 +9631,41 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     on: {
       "wxcLightboxOverlayClicked": _vm.wxcLightboxOverlayClicked
     }
-  })], 1)], 1)
+  })], 1), _c('div', [_c('div', {
+    staticClass: ["btn"],
+    on: {
+      "click": _vm.openMask
+    }
+  }, [_c('text', [_vm._v("点击弹出动画面板")])]), _c('div', {
+    staticClass: ["btn", "btn-margin", "yello"]
+  }, [_c('text', {
+    on: {
+      "click": _vm.openNoAnimationMask
+    }
+  }, [_vm._v("点击弹出无动画面板")])]), _c('wxc-mask', {
+    attrs: {
+      "height": "800",
+      "width": "702",
+      "borderRadius": "0",
+      "duration": "200",
+      "maskBgColor": "#ffffff",
+      "hasAnimation": _vm.hasAnimation,
+      "hasOverlay": true,
+      "showClose": true,
+      "show": _vm.showmask
+    },
+    on: {
+      "wxcMaskSetHidden": _vm.wxcMaskSetHidden
+    }
+  }, [_c('div', {
+    staticClass: ["content"]
+  }, [_c('div', {
+    staticClass: ["demo-title"]
+  }, [_c('text', {
+    staticClass: ["title"]
+  }, [_vm._v("weex帮助你构建原生应用")])]), _c('div', [_c('text', {
+    staticClass: ["content-text"]
+  }, [_vm._v("\n            与 Web App、HTML5 App 或 hybrid App 不同，您可以使用 Weex 构建一个真正的原生应用。更贴心的是你的代码只需使用 HTML、CSS、JavaScript可以构建原生应用，上手非常简单。但实际上，应用的底层是 Objective-C 或 Java， 同时，Weex 提供很多 native 组件或模块供开发人员使用。\n          ")])])])])], 1)], 1)])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 
