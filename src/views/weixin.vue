@@ -1,7 +1,10 @@
 <template lang="html">
   <div class="demo">
     <wxc-minibar title="提现绑定" background-color="#F2F3F4"></wxc-minibar>
-
+      <div class="inputbox">
+        <text>真实姓名：</text>
+        <input placeholder="姓名">
+      </div>
       <wxc-cell label="微信授权"
                 title="点击此处进行微信授权"
                 :has-arrow="true"
@@ -72,5 +75,12 @@ export default {
 .tips .tiptop{
   padding-left:30px;
   padding-right:30px;
+}
+.inputbox{
+  flex-direction: row;
+
+}
+.inputbox input {
+  outline: inherit;
 }
 </style>
