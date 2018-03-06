@@ -1391,7 +1391,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /* weex initialized here, please do not move this line */
 var router = __webpack_require__(13);
-var App = __webpack_require__(100);
+var App = __webpack_require__(101);
 
 // sync the router with the vuex store.
 // this registers `store.state.route`
@@ -9058,7 +9058,11 @@ var _cover = __webpack_require__(82);
 
 var _cover2 = _interopRequireDefault(_cover);
 
-var _WeexUi = __webpack_require__(86);
+var _weixin = __webpack_require__(86);
+
+var _weixin2 = _interopRequireDefault(_weixin);
+
+var _WeexUi = __webpack_require__(87);
 
 var _WeexUi2 = _interopRequireDefault(_WeexUi);
 
@@ -9083,6 +9087,10 @@ module.exports = new _vueRouter2.default({
     path: '/',
     name: 'Cover',
     component: _cover2.default
+  }, {
+    path: '/weixin',
+    name: 'Weixin',
+    component: _weixin2.default
   }]
 });
 
@@ -17234,20 +17242,26 @@ module.exports.render._withStripped = true
 
 /***/ }),
 /* 86 */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed: TypeError: loaders.map is not a function\n    at stringifyLoaders (D:\\zyh\\weex-ui-test\\node_modules\\weex-vue-loader\\lib\\loader.js:146:20)\n    at getLoaderString (D:\\zyh\\weex-ui-test\\node_modules\\weex-vue-loader\\lib\\loader.js:168:27)\n    at getRequireString (D:\\zyh\\weex-ui-test\\node_modules\\weex-vue-loader\\lib\\loader.js:97:7)\n    at getRequire (D:\\zyh\\weex-ui-test\\node_modules\\weex-vue-loader\\lib\\loader.js:88:7)\n    at D:\\zyh\\weex-ui-test\\node_modules\\weex-vue-loader\\lib\\loader.js:248:11\n    at Array.forEach (<anonymous>)\n    at Object.module.exports (D:\\zyh\\weex-ui-test\\node_modules\\weex-vue-loader\\lib\\loader.js:237:18)\n    at Object.loader (D:\\zyh\\weex-ui-test\\node_modules\\weex-loader\\lib\\loader.js:219:36)");
+
+/***/ }),
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(87)
+__vue_styles__.push(__webpack_require__(88)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(88)
+__vue_exports__ = __webpack_require__(89)
 
 /* template */
-var __vue_template__ = __webpack_require__(99)
+var __vue_template__ = __webpack_require__(100)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -17277,7 +17291,7 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -17362,7 +17376,7 @@ module.exports = {
 }
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17376,11 +17390,11 @@ var _wxcMask = __webpack_require__(1);
 
 var _wxcMask2 = _interopRequireDefault(_wxcMask);
 
-var _wxcLightbox = __webpack_require__(89);
+var _wxcLightbox = __webpack_require__(90);
 
 var _wxcLightbox2 = _interopRequireDefault(_wxcLightbox);
 
-var _wxcEpSlider = __webpack_require__(94);
+var _wxcEpSlider = __webpack_require__(95);
 
 var _wxcEpSlider2 = _interopRequireDefault(_wxcEpSlider);
 
@@ -17581,7 +17595,7 @@ exports.default = {
 //
 
 /***/ }),
-/* 89 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17591,7 +17605,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _index = __webpack_require__(90);
+var _index = __webpack_require__(91);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
@@ -17603,21 +17617,21 @@ Object.defineProperty(exports, 'default', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 90 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(91)
+__vue_styles__.push(__webpack_require__(92)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(92)
+__vue_exports__ = __webpack_require__(93)
 
 /* template */
-var __vue_template__ = __webpack_require__(93)
+var __vue_template__ = __webpack_require__(94)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -17647,7 +17661,7 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 91 */
+/* 92 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -17662,7 +17676,7 @@ module.exports = {
 }
 
 /***/ }),
-/* 92 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17762,7 +17776,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 93 */
+/* 94 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -17810,7 +17824,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 module.exports.render._withStripped = true
 
 /***/ }),
-/* 94 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17820,7 +17834,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _index = __webpack_require__(95);
+var _index = __webpack_require__(96);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
@@ -17832,21 +17846,21 @@ Object.defineProperty(exports, 'default', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 95 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(96)
+__vue_styles__.push(__webpack_require__(97)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(97)
+__vue_exports__ = __webpack_require__(98)
 
 /* template */
-var __vue_template__ = __webpack_require__(98)
+var __vue_template__ = __webpack_require__(99)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -17876,7 +17890,7 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 96 */
+/* 97 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -17887,7 +17901,7 @@ module.exports = {
 }
 
 /***/ }),
-/* 97 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18347,7 +18361,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 98 */
+/* 99 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -18387,7 +18401,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 module.exports.render._withStripped = true
 
 /***/ }),
-/* 99 */
+/* 100 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -18470,21 +18484,21 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 module.exports.render._withStripped = true
 
 /***/ }),
-/* 100 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(101)
+__vue_styles__.push(__webpack_require__(102)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(102)
+__vue_exports__ = __webpack_require__(103)
 
 /* template */
-var __vue_template__ = __webpack_require__(103)
+var __vue_template__ = __webpack_require__(104)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -18514,13 +18528,13 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 101 */
+/* 102 */
 /***/ (function(module, exports) {
 
 module.exports = {}
 
 /***/ }),
-/* 102 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18548,7 +18562,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 103 */
+/* 104 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
